@@ -1,0 +1,13 @@
+<html>
+<head>
+	<title>expense list</title>
+</head>
+<body>
+	<h1>AYY LIL MOMMA LEMME WHISPER IN YO EAR</h1>
+		<% @exp.each do |x|%>
+			<%if x.id = @id %>
+				<%= "#{x.id}" %> <%= "#{x.item}" %> Amount: <%= "#{x.amount}" %>
+			<%end%>
+		<%end%>		
+</body>
+</html>

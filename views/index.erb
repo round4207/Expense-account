@@ -1,0 +1,19 @@
+<html>
+<head>
+	<title>expense list</title>
+</head>
+<body>
+	<h1>AYY LIL MOMMA LEMME WHISPER IN YO EAR</h1>
+	Expenses:<br>
+	<% @exp.each do |x| %>
+		<a href=""><%= "#{x.id}" %></a> <%= "#{x.item}" %> Amount: <%= "#{x.amount}" %> <a href="show/">View details</a><br>
+	<% end %>
+	<br>
+	<% total = 0 %>
+	<% @exp.each do |x| %>
+		<% total += x.amount %>
+	<% end %>
+	Total: <%= "#{total}" %>
+	<a href="new">Add new Expense</a>
+</body>
+</html>
